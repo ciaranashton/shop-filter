@@ -15,9 +15,11 @@ export interface Product {
 }
 
 export interface Filter {
-    label: string,
-    value: string | number
+	label: string;
+	amount: string | number;
 }
+
+export const getFilters = (products: Product[]) => products;
 
 const Shop = () => {
 	const [products, setProducts]: [Product[], Function] = useState(items);

@@ -20,7 +20,7 @@ export const items = [
     {
         id: 3,
         title: 'Skinny jeans',
-        color: 'dark blue',
+        color: 'blue',
         price: 90.00,
         brand: 'Volcom',
         type: 'trousers',
@@ -47,7 +47,7 @@ export const items = [
     {
         id: 6,
         title: 'Tonic crew t-shirt',
-        color: ['black', 'white'],
+        color: 'white',
         price: 28.00,
         brand: 'All Saints',
         type: 'tshirt',
