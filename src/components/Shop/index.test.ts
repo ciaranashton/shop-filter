@@ -1,12 +1,12 @@
 import { items } from './items';
-import { Filter, Product, getFilters } from './index';
+import { Filter, Filters, Product, getFilters } from './index';
 
 describe('filters', () => {
 	it('returns an array of filters', () => {
 		const products: Product[] = items;
 		const activeFilters: string[] = [];
 
-		const expectedResult = {
+		const expectedResult: Filters = {
 			male: [
 				selection('color', [
 					filter('green', 1),
@@ -26,9 +26,11 @@ describe('filters', () => {
                 ])
 			],
 			female: [],
-        };
+		};
 
-        expect(getFilters(products)).toEqual(expectedResult)
+		// console.log(JSON.stringify(getFilters(products), null, 2));
+
+		expect(getFilters(products)).toEqual(expectedResult);
 	});
 });
 

@@ -4,9 +4,10 @@ import { Filter } from '../Shop/index';
 
 interface Props {
 	filters: Filter[];
+	selected: string[];
 }
 
-const Filters: React.SFC<Props> = ({ filters }) => {
+const Filters: React.SFC<Props> = ({ filters, selected }) => {
 	return (
 		<div className={styles.filters}>
 			<h3>Filters</h3>

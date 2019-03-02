@@ -53,4 +53,13 @@ export const items = [
         type: 'tshirt',
         gender: 'male'
     },
+    {
+        id: 7,
+        title: 'Christmas Jumper',
+        color: 'red',
+        price: 50.00,
+        brand: 'All Saints',
+        type: 'jumper',
+        gender: 'female'
+    },
 ]

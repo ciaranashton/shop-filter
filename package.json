@@ -7,6 +7,7 @@
     "@svgr/webpack": "2.4.1",
     "@types/jest": "23.3.13",
     "@types/node": "10.12.18",
+    "@types/ramda": "github:types/npm-ramda#dist",
     "@types/react": "16.7.21",
     "@types/react-dom": "16.0.11",
     "babel-core": "7.0.0-bridge.0",
@@ -43,6 +44,7 @@
     "postcss-loader": "3.0.0",
     "postcss-preset-env": "6.3.1",
     "postcss-safe-parser": "4.0.1",
+    "ramda": "^0.26.1",
     "react": "16.7.0-alpha.2",
     "react-app-polyfill": "^0.2.0",
     "react-dev-utils": "^7.0.1",
@@ -117,5 +119,6 @@
     "presets": [
       "react-app"
     ]
-  }
+  },
+  "devDependencies": {}
 }
