@@ -9,12 +9,11 @@ import { product } from 'ramda';
 
 export interface Product {
 	id: number;
-	title: string;
-	color: string | Array<string>;
-	price: number;
-	brand: string;
+	name: string;
+	distillery: string;
+	source: string;
+	seed: string;
 	type: string;
-	gender: string;
 }
 
 export interface Filter {
@@ -28,30 +27,6 @@ export interface Filters {
 		filters: Array<Filter>;
 	}>;
 }
-
-const indexByGenders = (products: any) =>
-	products.reduce(
-		// TODO :: return the accumulator type to Filters
-		(acc: any, val: any) => ({
-			...acc,
-			[val.gender]: [...acc[val.gender], val],
-		}),
-		{ female: [], male: [] },
-	);
-
-const defineFilters = (products: Product[]) =>
-	products.reduce(
-		(acc: any, val) => ({
-			color: [...acc.color, val.color],
-			brand: [...acc.brand, val.brand],
-			type: [...acc.type, val.type],
-		}),
-		{
-			color: [],
-			brand: [],
-			type: [],
-		},
-	);
 
 const Shop = () => {
 	const [products, setProducts]: [Product[], Function] = useState(items);

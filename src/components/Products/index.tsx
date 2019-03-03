@@ -11,7 +11,7 @@ const Products: React.SFC<Props> = ({ products }) => (
 		<h3>Products</h3>
 		<ul>
 			{products.map(p => (
-				<li key={p.id}>{p.title}</li>
+				<li key={p.id}>{p.name}</li>
 			))}
 		</ul>
 	</section>
