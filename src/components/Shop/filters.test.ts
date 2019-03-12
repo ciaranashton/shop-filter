@@ -1,11 +1,12 @@
-import { groupFiltersBy } from './index';
+import { groupFiltersBy } from './utilities';
+import { Filters } from './';
 
 describe('filters', () => {
-  test('getFilters', () => {
+  test('getFiltersBy', () => {
     const groupFilters = groupFiltersBy('seed', 'type', 'source');
-    const filters = groupFilters(items);
+    const filters:Filters = groupFilters(items);
 
-    const expected = {
+    const expected:Filters = {
       seed: { malt: 3, grain: 1 },
       type: { scotch: 3, bourbon: 1 },
       source: { single: 3, blend: 1 },
