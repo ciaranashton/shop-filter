@@ -59,14 +59,14 @@ filters.
 
 ```js
 products = [
-	{
-		id: 1,
-		name: 'The Classic Laddie',
-		distillery: 'Bruichladdich',
-		source: 'single',
-		seed: 'malt',
-		type: 'scotch',
-	},
+  {
+    id: 1,
+    name: 'The Classic Laddie',
+    distillery: 'Bruichladdich',
+    source: 'single',
+    seed: 'malt',
+    type: 'scotch',
+  },
 ];
 ```
 
@@ -74,8 +74,8 @@ products = [
 
 ```js
 selectedFilters = {
-	seed: ['malt', 'grain'],
-	type: ['scotch'],
-	source: ['single', 'blend'],
+  seed: ['malt', 'grain'],
+  type: ['scotch'],
+  source: ['single', 'blend'],
 };
 ```

@@ -1,14 +1,6 @@
 import * as React from 'react';
 import styles from './products.module.css';
-
-export interface Product {
-	id: number;
-	name: string;
-	distillery: string;
-	source: string;
-	seed: string;
-	type: string;
-}
+import { Product } from '../Shop';
 
 interface Props {
 	products: Product[];
