@@ -1,5 +1,8 @@
 import { groupFiltersBy } from './utilities';
-import { Filters } from './';
+
+interface Filters {
+  [key:string]: {[key:string]: number }
+}
 
 describe('filters', () => {
   test('getFiltersBy', () => {

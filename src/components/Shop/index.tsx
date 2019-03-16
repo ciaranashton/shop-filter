@@ -18,22 +18,23 @@ export interface Product {
   type: string;
   [key: string]: string | number;
 }
-export interface Filters {
-  seed?: { [key: string]: number };
-  type?: { [key: string]: number };
-  source?: { [key: string]: number };
-}
 
 const groupFilters = groupFiltersBy('seed', 'type', 'source');
 
 const Shop = () => {
-  const [products, setProducts]: [Product[], Function] = useState(items);
+  const [products, setProducts]: [Product[], Function] = useState(
+    items,
+  );
   const [selected, setSelected]: [string[], Function] = useState([]);
 
   return (
     <div className={styles.shop}>
       <Products products={products} />
-      <Filters filters={groupFilters(products)} selected={selected} />
+      <Filters
+        filters={groupFilters(products)}
+        selected={selected}
+        setSelected={setSelected}
+      />
     </div>
   );
 };

@@ -1,20 +1,30 @@
 import * as React from 'react';
 import styles from './filters.module.css';
-import { Filters } from '../Shop';
 
 interface Props {
-  filters: Filters;
+  filters: {
+    seed?: { [key: string]: number };
+    type?: { [key: string]: number };
+    source?: { [key: string]: number };
+  };
   selected: string[];
+  setSelected: Function;
 }
 
 const FilterOptions = (props: { filter: string; count: number }) => (
-  <div>
+  <div
+    onClick={x => {
+      console.log(props.filter);
+    }}>
     <div>{props.filter}</div>
     <div>{props.count}</div>
   </div>
 );
 
-const FilterSection = (props: { label: string; sections: { [key: string]: number } }) => (
+const FilterSection = (props: {
+  label: string;
+  sections: { [key: string]: number };
+}) => (
   <div key={props.label}>
     <h4>{props.label}</h4>
     {Object.entries(props.sections).map(([filter, count], i) => (
