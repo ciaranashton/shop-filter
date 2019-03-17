@@ -1,9 +1,9 @@
 import * as React from 'react';
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import { items } from './items';
 import styles from './shop.module.css';
 import { groupFiltersBy } from './utilities';
-import { ShopProvider } from './ShopContext';
+import { ShopContext } from './ShopContext';
 
 // components
 import Products from '../Products';
@@ -26,21 +26,18 @@ const Shop = () => {
     const [products, setProducts]: [Product[], Function] = useState(
         items,
     );
-    const [selected, setSelected]: [string[], Function] = useState(
-        [],
-    );
+
+    const { selected } = useContext(ShopContext);
+    console.log(selected);
 
     return (
-        <ShopProvider>
-            <div className={styles.shop}>
-                <Products products={products} />
-                <Filters
-                    filters={groupFilters(products)}
-                    selected={selected}
-                    setSelected={setSelected}
-                />
-            </div>
-        </ShopProvider>
+        <div className={styles.shop}>
+            <Products products={products} />
+            <Filters
+                filters={groupFilters(products)}
+                selected={selected}
+            />
+        </div>
     );
 };
 

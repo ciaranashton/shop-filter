@@ -10,16 +10,15 @@ interface Props {
         source?: { [key: string]: number };
     };
     selected: string[];
-    setSelected: Function;
 }
 
 const FilterOptions = (props: { filter: string; count: number }) => {
-    const { setSelected } = useContext(ShopContext);
+    const { setSelected, selected } = useContext(ShopContext);
 
     return (
         <div
             onClick={() => {
-                setSelected(props.filter);
+                setSelected([...selected, props.filter]);
             }}>
             <div>{props.filter}</div>
             <div>{props.count}</div>

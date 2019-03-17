@@ -1,6 +1,7 @@
 import * as React from "react"
 import { render } from "react-dom"
 import Shop from './components/Shop/index';
+import { ShopProvider } from './components/Shop/ShopContext'
 
 const App = () => {
   return (
@@ -11,4 +12,4 @@ const App = () => {
   );
 }
 
-render(<App />, document.getElementById("app"))
+render(<ShopProvider><App /></ShopProvider>, document.getElementById("app"))
