@@ -5,7 +5,7 @@ export const ShopContext = React.createContext(null);
 export const ShopConsumer = ShopContext.Consumer;
 
 interface Props {
-    children: React.ReactChild;
+    children: React.ReactChild | React.ReactChild[];
 }
 
 export const ShopProvider = ({ children }: Props) => {

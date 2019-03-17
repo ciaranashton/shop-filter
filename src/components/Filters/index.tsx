@@ -12,7 +12,7 @@ interface Props {
     selected: string[];
 }
 
-const FilterOptions = (props: { filter: string; count: number }) => {
+export const FilterOptions = (props: { filter: string; count: number }) => {
     const { setSelected, selected } = useContext(ShopContext);
 
     return (
@@ -22,6 +22,7 @@ const FilterOptions = (props: { filter: string; count: number }) => {
             }}>
             <div>{props.filter}</div>
             <div>{props.count}</div>
+            <h2>{selected}</h2>
         </div>
     );
 };
