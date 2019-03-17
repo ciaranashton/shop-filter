@@ -1,9 +1,8 @@
 import * as React from 'react';
 import { useState } from 'react';
 
-const ShopContext = React.createContext(null);
-const Provider = ShopContext.Provider;
-const Consumer = ShopContext.Consumer;
+export const ShopContext = React.createContext(null);
+export const ShopConsumer = ShopContext.Consumer;
 
 interface Props {
     children: React.ReactChild;
@@ -15,14 +14,12 @@ export const ShopProvider = ({ children }: Props) => {
     );
 
     return (
-        <Provider
+        <ShopContext.Provider
             value={{
                 selected,
                 setSelected,
             }}>
             {children}
-        </Provider>
+        </ShopContext.Provider>
     );
 };
-
-export { Consumer as ShopConsumer, ShopContext };
